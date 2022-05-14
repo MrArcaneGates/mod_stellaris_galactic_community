@@ -9,6 +9,17 @@ cb_humiliation = {
 		NOT = { is_in_federation_with = from }
 	}
 	is_valid = {
+		if = {
+			limit = {
+				NOT = {
+					from = {
+						has_relation_flag = {
+							who = root
+							flag = vivisectors
+						}
+					}
+				}
+			}
 		OR = {
 			NOT = { has_policy_flag = liberation_wars }
 			from = { has_ethic = ethic_gestalt_consciousness }
@@ -29,6 +40,7 @@ cb_humiliation = {
 				}
 			}
 		}
+	}
 
 		has_total_war_cb = no
 		NOT = { is_overlord_to = FROM }
