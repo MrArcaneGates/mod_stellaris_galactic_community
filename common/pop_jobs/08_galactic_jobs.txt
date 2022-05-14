@@ -1,24 +1,26 @@
-###################
-# Fancy Jobs
-###################
 medical_professional = {
 	category = ruler
 	condition_string = RULER_JOB_TRIGGER
 	building_icon = building_clinic
 	clothes_texture_index = 1
+	icon = researcher
 
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
 		is_being_purged = no
 		is_being_assimilated = no
+		is_sapient = yes
 	}
+
+	possible_precalc = can_fill_ruler_job
 
 	possible = {
-		ruler_job_check_trigger = yes
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
 	}
-
 	resources = {
 		category = planet_doctors
 		produces = {

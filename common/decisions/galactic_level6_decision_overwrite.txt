@@ -14,10 +14,7 @@ decision_extradimensional_experimentation = {
 		owner = {
 			is_galactic_community_member = yes
 		}
-		OR = {
-			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
-			is_active_resolution = "resolution_galacticstudies_6"
-		}
+		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
 		NOT = { has_modifier = pm_extradimensional_experimentation }
 	}
 

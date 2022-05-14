@@ -16,6 +16,7 @@ listening_post = {
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_sensors_2 }
+		is_orbital_ring = no
 	}	
 	
 	station_modifier = {
@@ -46,11 +47,7 @@ listening_post = {
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = no
 	ai_weight = {
-		weight = 0.1
-		modifier = {
-			factor = 11
-			years_passed > 30
-		}
+		weight = 100
 	}	
 	
 	show_in_tech = "tech_sensors_2"
@@ -67,9 +64,12 @@ black_hole_observatory = {
 	
 	possible = {
 		custom_tooltip = {
-			fail_text = "requires_starport"
+			fail_text = "requires_starport_or_ring"
+			OR = {
 			has_starbase_size >= starbase_starport
+			is_orbital_ring = yes
 		}
+	}
 		custom_tooltip = {
 			fail_text = "requires_black_hole"
 			star = { is_star_class = sc_black_hole }
@@ -83,7 +83,7 @@ black_hole_observatory = {
 		}
 
 		produces = {
-			physics_research = 10
+			physics_research = 15
 		}
 		produces = {
 			trigger = {
@@ -99,7 +99,14 @@ black_hole_observatory = {
 					is_active_resolution = "resolution_galacticstudies_6"
 				}
 			}
-			physics_research = 10
+			physics_research = 15
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_mine_dark_matter }
+			}
+			sr_dark_matter = 1
 		}
 
 		upkeep = {
@@ -112,11 +119,9 @@ black_hole_observatory = {
 	ai_build_at_chokepoint = no
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
-		weight = 150
+		weight = 100
 	}
 }
-
-
 
 curator_think_tank = {
 	icon = "GFX_starbase_curator_think_tank"
@@ -124,17 +129,11 @@ curator_think_tank = {
 	
 	potential = {
 		exists = owner
-		OR = {
-			owner = { has_country_flag = curator_intro }
-			solar_system = { has_star_flag = enclave }
-		}	
 		owner = {
-			NOR = { 
-				has_valid_civic = civic_fanatic_purifiers 
-				has_valid_civic = civic_hive_devouring_swarm 
-				has_valid_civic = civic_machine_terminator 
-			}
+			is_homicidal = no
+			has_country_flag = curator_intro
 		}
+		is_orbital_ring = no
 	}
 	
 	possible = {
@@ -207,7 +206,7 @@ curator_think_tank = {
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
-		weight = 150
+		weight = 100
 	}
 }
 
@@ -217,18 +216,12 @@ art_college = {
 	
 	potential = {
 		exists = owner
-		OR = {
-			owner = { has_country_flag = enclave_artist_encountered }
-			solar_system = { has_star_flag = enclave }
-		}
 		owner = {
-			NOR = { 
-				has_valid_civic = civic_fanatic_purifiers 
-				has_valid_civic = civic_hive_devouring_swarm 
-				has_valid_civic = civic_machine_terminator 
-			}
+			is_homicidal = no
+			has_country_flag = enclave_artist_encountered
 		}
-	}
+		is_orbital_ring = no
+		}
 	
 	possible = {
 		custom_tooltip = {
@@ -291,6 +284,90 @@ art_college = {
 		upkeep = {
 			energy = 2
 		}
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+salvager_workshop = {
+	icon = "GFX_starbase_salvager_workshop"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			is_homicidal = no
+			has_country_flag = salvager_enclave_diplomacy_engaged
+		}
+		is_orbital_ring = no
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_salvager_enclave"
+			solar_system = {
+				has_star_flag = enclave
+				any_fleet_in_system = {
+					exists = owner
+					owner = {
+						has_country_flag = salvager_enclave_country
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_salvager_agreement"
+			solar_system = {
+				has_star_flag = enclave
+				any_fleet_in_system = {
+					exists = owner
+					owner = {
+						has_country_flag = salvager_enclave_country
+						has_country_flag = salvage_works@root.owner
+					}
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+		upkeep = {
+			energy = 3
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_galactic_community_member = yes
+				}
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					is_active_resolution = "resolution_galacticstudies_6"
+				}
+			}
+			alloys = 5
+		}
+	}
+
+	orbit_modifier = {
+		ship_orbit_upkeep_mult = -0.2
+		ship_repair_hull_mult = 0.3
+		ship_repair_armor_mult = 0.3
 	}
 
 	ai_build_at_chokepoint = yes
@@ -394,5 +471,86 @@ trader_proxy_office = {
 				}
 			}
 		}
+	}
+}
+mercenary_garrison = {
+	icon = "GFX_starbase_mercenary_garrison"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = {
+			is_homicidal = no
+			has_country_flag = mercenary_enclave_diplomacy_engaged
+		}
+		is_orbital_ring = no
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+		custom_tooltip = {
+			fail_text = "requires_mercenary_agreement"
+			owner = {
+				has_country_flag = mercenary_enclave_bought_mercenary_garrison
+			}
+		}
+		solar_system = {
+			count_starbase_buildings = {
+				type = mercenary_garrison
+				count < 1
+				include_being_constructed = yes
+			}
+		}
+	}
+
+	abort_construction_trigger = {
+		solar_system = {
+			count_starbase_buildings = {
+				type = mercenary_garrison
+				count > 1
+				include_being_constructed = yes
+			}
+		}
+	}
+
+	equipped_component = "STARBASE_AURA_MERCENARY_GARRISON"
+
+	triggered_country_modifier = {
+		potential = {
+			hidden_trigger = { exists = this }
+
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+				is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+				is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				is_active_resolution = "resolution_galacticstudies_6"
+			}
+		}
+
+		country_naval_cap_add = 5
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 50
 	}
 }

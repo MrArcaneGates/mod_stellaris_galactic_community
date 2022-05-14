@@ -188,7 +188,7 @@
  resolution_sanctions_tech_4_desc:0 "Reichen, die sich nicht an das Galaktische Recht halten, muss der Zugang zu gefährlichen Technologien versperrt werden."
  
  resolution_sanctions_tech_repeal_4:0 "§R$resolution_sanctions_tech_4$ widerrufen§!"
- resolution_sanctions_tech_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_tech_4$"
+ resolution_sanctions_tech_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_tech_4$§"
  resolution_sanctions_tech_repeal_4_effect_success:0 "Widerruft den Beschluss §Y$resolution_sanctions_tech_4$§!, wodurch §Y$resolution_sanctions_tech_3$§! das neue Galaktische Gesetz wird."
  
  
@@ -196,7 +196,7 @@
  resolution_sanctions_economic_4_desc:0 "Wir müssen mit harten Strafen dafür sorgen, dass nur jene Reiche wirtschaftlich florieren, die sich an das Galaktische Recht halten."
  
  resolution_sanctions_economic_repeal_4:0 "§R$resolution_sanctions_economic_4$ widerrufen§!"
- resolution_sanctions_economic_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_economic_4$"
+ resolution_sanctions_economic_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_economic_4$§"
  resolution_sanctions_economic_repeal_4_effect_success:0 "Widerruft den Beschluss §Y$resolution_sanctions_economic_4$§!, wodurch §Y$resolution_sanctions_economic_3$§! das neue Galaktische Gesetz wird."
  
  
@@ -204,7 +204,7 @@
  resolution_sanctions_military_4_desc:0 "Wer sich nicht an das Galaktische Recht hält ist eine Bedrohung für den Frieden und darf keinesfalls über eine nennenswerte Flotte verfügen."
  
  resolution_sanctions_military_repeal_4:0 "§R$resolution_sanctions_military_4$ widerrufen§!"
- resolution_sanctions_military_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_military_4$"
+ resolution_sanctions_military_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_military_4$§"
  resolution_sanctions_military_repeal_4_effect_success:0 "Widerruft den Beschluss §Y$resolution_sanctions_military_4$§!, wodurch §Y$resolution_sanctions_military_3$§! das neue Galaktische Gesetz wird."
 
  
@@ -212,7 +212,7 @@
  resolution_sanctions_administrative_4_desc:0 "Wir kooperieren keinesfalls mit Reichen, die sich nicht an das Galaktische Recht halten."
  
  resolution_sanctions_administrative_repeal_4:0 "§R$resolution_sanctions_administrative_4$ widerrufen§!"
- resolution_sanctions_administrative_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_administrative_4$"
+ resolution_sanctions_administrative_repeal_4_desc:0 "Widerruft den Beschluss §R$resolution_sanctions_administrative_4$§"
  resolution_sanctions_administrative_repeal_4_effect_success:0 "Widerruft den Beschluss §Y$resolution_sanctions_administrative_4$§!, wodurch §Y$resolution_sanctions_administrative_3$§! das neue Galaktische Gesetz wird."
 
   mod_job_medical_professional_add:0 "Gesundheitsexperten pro Planet"

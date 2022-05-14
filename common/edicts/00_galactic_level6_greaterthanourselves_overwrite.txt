@@ -2,34 +2,26 @@
 # Empire edicts
 ##########################################################################
 
-@Edict1Cost = 100
-@Edict2Cost = 200
-@Edict3Cost = 300
+@Edict1Cost = 10
+@Edict2Cost = 20
+@Edict3Cost = 30
 
 @EdictPerpetual = -1
 
 greater_than_ourselves = {
 	length = @EdictPerpetual
 	icon = "GFX_edict_type_policy"
-	edict_cap_usage = 1
 
 	resources = {
 		category = edicts
-		cost = { #Activation Cost
-			trigger = {
-				NOT = { has_edict = greater_than_ourselves }			
-			}
-			influence = 300
-		}
-		cost = { #Deactivation Cost
-			trigger = {
-				has_edict = greater_than_ourselves
-			}
-			influence = 200
+		upkeep = {
+			unity = @Edict2Cost
+			multiplier = value:edict_size_effect
 		}
 	}
 
 	modifier = {
+		planet_resettlement_unemployed_mult = 2.00
 	}
 
 	potential = {
@@ -43,6 +35,6 @@ greater_than_ourselves = {
 	}
 
 	ai_weight = {
-		weight = @EdictHighPrio
+		weight = @EdictLowPrio
 	}
 }
