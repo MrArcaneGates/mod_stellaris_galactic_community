@@ -28,13 +28,6 @@ col_default = {
 		planet_resettlement_unemployed_destination_mult = 0.25
 	}
 
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
 	weight_modifier = {
 		base = 10
 	}
@@ -56,13 +49,6 @@ col_default_machine = {
 		planet_stability_add = 5
 		planet_amenities_no_happiness_add = 10
 		planet_resettlement_unemployed_destination_mult = 0.25
-	}
-
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -124,30 +110,6 @@ col_city = {
 		}
 	}
 }
-
-# Crucible Planet
-col_crucible = {
-	icon = GFX_colony_type_crucible_world
-
-	potential = {
-		has_modifier = crucible_colony
-	}
-	planet_modifier = {
-		pop_growth_speed = 0.10
-	}
-
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
-	weight_modifier = {
-		base = 1000
-	}
-}
-
 
 # Mining Planet
 col_mining = {
@@ -610,13 +572,6 @@ col_industrial = {
 	}
 
 	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
-	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -725,14 +680,7 @@ col_foundry = {
 		planet_district_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.20
 	}
-	
 	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-		triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -869,13 +817,6 @@ col_factory = {
 		planet_district_industrial_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.20
 	}
-	
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -984,13 +925,6 @@ col_refinery = {
 		planet_building_refinery_build_speed_mult = 0.25
 		planet_building_chemical_plant_build_speed_mult = 0.25
 		planet_building_crystal_plant_build_speed_mult = 0.25
-	}
-	
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1290,13 +1224,6 @@ col_capital = {
 		planet_resettlement_unemployed_destination_mult = 0.1
 	}
 
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
 	weight_modifier = {
 		base = 15000
 	}
@@ -1323,13 +1250,6 @@ col_capital_hive = {
 		planet_resettlement_unemployed_destination_mult = 0.1
 	}
 
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
 	weight_modifier = {
 		base = 15000
 	}
@@ -1354,13 +1274,6 @@ col_capital_machine = {
 		planet_crime_no_happiness_add = -20
 		planet_jobs_produces_mult = 0.15
 		planet_resettlement_unemployed_destination_mult = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -1557,10 +1470,6 @@ col_habitat_research = {
 			has_designation = col_habitat_research
 		}
 		modifier = {
-			factor = 5
-			has_planet_flag = research_habitat
-		}
-		modifier = {
 			factor = 3
 			num_districts = { type = district_hab_science value >= 3 }
 		}
@@ -1701,7 +1610,7 @@ col_habitat_farming = {
 	}
 
 	weight_modifier = {
-		base = 300
+		base = 1000
 		modifier = {
 			factor = 2
 			owner = { has_monthly_income = { resource = food value < 0 } }
@@ -1760,7 +1669,7 @@ col_habitat_gestalt_farming = {
 	}
 
 	weight_modifier = {
-		base = 300
+		base = 1000
 		modifier = {
 			factor = 2
 			owner = { has_monthly_income = { resource = food value < 0 } }
@@ -1832,7 +1741,7 @@ col_habitat_fortress = {
 	}
 }
 
-# Habitat Industrial
+Habitat Industrial
 col_habitat_industrial = {
 	icon = GFX_colony_type_hab_industrial
 
@@ -2491,17 +2400,10 @@ col_ring_mix = {
 	planet_modifier = {
 		planet_immigration_pull_mult = 0.2
 		planet_jobs_produces_mult = 0.05
-		pop_growth_speed = 0.15
-		planet_pop_assembly_mult = 0.15
-		planet_pop_assembly_organic_mult = 0.15
 	}
 
 	weight_modifier = {
 		base = 1
-		modifier = {
-			factor = 500
-			num_pops < 15
-		}
 	}
 }
 
@@ -2516,9 +2418,6 @@ col_ring_research = {
 		planet_jobs_engineering_research_produces_mult = 0.15
 		planet_jobs_physics_research_produces_mult = 0.15
 		planet_jobs_society_research_produces_mult = 0.15
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -2559,9 +2458,6 @@ col_ring_farming = {
 
 	planet_modifier = {
 		planet_farmers_food_produces_mult = 0.25
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 
 	triggered_planet_modifier = {
@@ -2636,9 +2532,6 @@ col_ring_trade = {
 
 	planet_modifier = {
 		trade_value_mult = 0.2
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -2665,9 +2558,6 @@ col_ring_generator = {
 
 	planet_modifier = {
 		planet_technician_energy_produces_mult = 0.25
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 
 	triggered_planet_modifier = {
@@ -3394,21 +3284,6 @@ col_bureau = {
 		planet_administrators_upkeep_mult = -0.10
 	}
 
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-		}
-		job_priest_per_pop = 0.04
-	}
-
 	weight_modifier = {
 		base = 10
 		modifier = {
@@ -3505,21 +3380,6 @@ col_bureau_spiritualist = {
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
-	}
-
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-		}
-		job_priest_per_pop = 0.04
 	}
 
 	weight_modifier = {
@@ -3636,13 +3496,6 @@ col_bureau_hive = {
 		planet_administrators_upkeep_mult = -0.10
 	}
 
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
 	weight_modifier = {
 		base = 10
 		modifier = {
@@ -3713,10 +3566,7 @@ col_bureau_machine = {
 
 	potential = {
 		exists = owner
-		owner = {
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-		}
+		owner = { is_machine_empire = yes }
 		NOT = {
 			uses_district_set = habitat
 		}
@@ -3726,13 +3576,6 @@ col_bureau_machine = {
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
-	}
-
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -3817,13 +3660,6 @@ col_trophy_machine = {
 		pop_growth_speed = 0.10
 	}
 
-	triggered_planet_modifier = {
-		potential = { uses_district_set = ring_world }
-		pop_growth_speed = 0.1
-		planet_pop_assembly_mult = 0.1
-		planet_pop_assembly_organic_mult = 0.1
-	}
-
 	weight_modifier = {
 		base = 10
 		modifier = {
@@ -3893,6 +3729,7 @@ col_trophy_machine = {
 	}
 }
 
+
 col_habitat_bureau = {
 	icon = GFX_colony_type_hab_bureaucratic
 
@@ -3909,14 +3746,6 @@ col_habitat_bureau = {
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-		}
-		job_priest_per_pop = 0.04
 	}
 
 	weight_modifier = {
@@ -4003,14 +3832,6 @@ planet_modifier = {
 	planet_administrators_upkeep_mult = -0.10
 }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-		}
-		job_priest_per_pop = 0.04
-	}
-	
 weight_modifier = {
 	base = 10
 	modifier = {

@@ -5,7 +5,6 @@
 @Edict1Cost = 10
 @Edict2Cost = 20
 @Edict3Cost = 30
-@EdictSpecialCost = 1
 
 @EdictPerpetual = -1
 

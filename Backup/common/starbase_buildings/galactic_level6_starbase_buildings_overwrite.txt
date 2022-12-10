@@ -44,11 +44,11 @@ listening_post = {
 		ship_hyperlane_range_add = 1
 	}
 
-
-
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
+		weight = 100
+	}	
 	
 	show_in_tech = "tech_sensors_2"
 }
@@ -116,12 +116,8 @@ black_hole_observatory = {
 
 	show_in_tech = "tech_sensors_3"
 	
-	
-
-	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
-}
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 100
 	}
@@ -207,8 +203,10 @@ curator_think_tank = {
 		}
 	}
 
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 100
 	}
 }
 
@@ -288,8 +286,8 @@ art_college = {
 		}
 	}
 
-
-
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
@@ -372,8 +370,8 @@ salvager_workshop = {
 		ship_repair_armor_mult = 0.3
 	}
 
-
-
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 150
 	}
@@ -384,6 +382,7 @@ trader_proxy_office = {
 	icon = "GFX_starbase_offworld_trading_company"
 	construction_days = 360
 
+	
 	potential = {
 		exists = owner
 		owner = {
@@ -396,7 +395,6 @@ trader_proxy_office = {
 				has_fleet_flag = trader_enclave_station
 			}
 		}
-		is_orbital_ring = no
 	}	
 	
 	possible = {
@@ -407,10 +405,10 @@ trader_proxy_office = {
 		NOT = { has_starbase_building = trader_proxy_office }
 
 		custom_tooltip = {
-			fail_text = "requires_trader_enclave"
+			fail_text = "requires_trade_enclave"
 			solar_system = {
 				OR = {
-					any_system_colony = {
+					any_system_planet = {
 						exists = owner
 						owner = { is_country_type = default }
 					}
@@ -458,10 +456,9 @@ trader_proxy_office = {
 		trade_value_add = 5
 	}
 
-
-
+	ai_build_at_chokepoint = yes
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 200
 		modifier = {
 			factor = 0
 			OR = {
@@ -552,8 +549,8 @@ mercenary_garrison = {
 	}
 
 	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = yes
+	ai_build_outside_chokepoint = no
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 50
 	}
 }
