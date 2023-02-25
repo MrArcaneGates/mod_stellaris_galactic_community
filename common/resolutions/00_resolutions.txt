@@ -1171,10 +1171,6 @@ resolution_healthcare_1 = {
 
 		modifier = {
 			factor = 1.5
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 1.5
 			is_xenophile = yes
 		}
 		modifier = {
@@ -1222,10 +1218,6 @@ resolution_healthcare_2 = {
 	ai_weight = {
 		base = @resolution_weight_popular
 
-		modifier = {
-			factor = 1.5
-			is_materialist = yes
-		}
 		modifier = {
 			factor = 1.5
 			is_xenophile = yes
@@ -1278,10 +1270,6 @@ resolution_healthcare_3 = {
 
 		modifier = {
 			factor = 1.5
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 1.5
 			is_xenophile = yes
 		}
 		modifier = {
@@ -1329,20 +1317,8 @@ resolution_healthcare_4 = {
 	}
 
 	ai_weight = {
-		base = @resolution_weight_popular
+		base = @resolution_weight_unpopular
 
-		modifier = {
-			factor = 1.5
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_xenophile = yes
-		}
-		modifier = {
-			factor = 0.1
-			is_xenophobe = yes
-		}
 	}
 }
 
@@ -1385,20 +1361,8 @@ resolution_healthcare_5 = {
 	}
 
 	ai_weight = {
-		base = @resolution_weight_popular
+		base = @resolution_weight_unpopular
 
-		modifier = {
-			factor = 1.5
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_xenophile = yes
-		}
-		modifier = {
-			factor = 0.1
-			is_xenophobe = yes
-		}
 	}
 }
 
@@ -1442,20 +1406,8 @@ resolution_healthcare_6 = {
 	}
 
 	ai_weight = {
-		base = @resolution_weight_popular
+		base = @resolution_weight_unpopular
 
-		modifier = {
-			factor = 1.5
-			is_materialist = yes
-		}
-		modifier = {
-			factor = 1.5
-			is_xenophile = yes
-		}
-		modifier = {
-			factor = 0.1
-			is_xenophobe = yes
-		}
 	}
 }
 
