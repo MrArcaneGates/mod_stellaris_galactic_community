@@ -48,7 +48,7 @@ listening_post = {
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
-	}
+	}	
 	
 	show_in_tech = "tech_sensors_2"
 }
@@ -114,18 +114,15 @@ black_hole_observatory = {
 		}
 	}
 
-	show_in_tech = "tech_sensors_3"
-	
+	show_in_tech = "tech_sensors_3"	
+
 	
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
 }
-	ai_weight = {
-		weight = 100
-	}
-}
+
 
 curator_think_tank = {
 	icon = "GFX_starbase_curator_think_tank"
@@ -206,6 +203,8 @@ curator_think_tank = {
 			energy = 2
 		}
 	}
+
+
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
@@ -551,9 +550,9 @@ mercenary_garrison = {
 		}
 	}
 
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = yes
+	
+
 	ai_weight = {
-		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		weight = 50
 	}
 }
