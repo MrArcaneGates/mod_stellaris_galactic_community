@@ -10,9 +10,10 @@ building_research_lab_3 = {
 
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
 			has_modifier = slave_colony
+			has_modifier = resort_colony
 			has_modifier = crucible_colony
+			buildings_no_exotic_gases = yes
 		}
 	}
 

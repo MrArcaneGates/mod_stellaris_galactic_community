@@ -19,29 +19,9 @@ listening_post = {
 		is_orbital_ring = no
 	}	
 	
-	possible = {
-		NOT = {
-			has_starbase_building = dark_matter_listening_post
-		}
-	}
-
 	station_modifier = {
 		ship_sensor_range_add = 2
 		ship_hyperlane_range_add = 4
-	}
-
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = { exists = this }
-			exists = owner
-			owner = {
-				has_technology = tech_unusual_senses
-			}
-		}
-		custom_tooltip = sm_listening_post_unusual_senses_desc
-		ship_cloaking_detection_add = 1
-		ship_sensor_range_add = 1
-		mult = value:unusual_senses_mult
 	}
 
 	triggered_station_modifier = {
@@ -64,19 +44,8 @@ listening_post = {
 		ship_hyperlane_range_add = 1
 	}
 
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = { exists = this }
-			exists = owner
-			owner = {
-				has_civic = civic_hive_subspace_ephapse
-				has_first_contact_dlc = yes
-			}
-		}
 
-		ship_cloaking_detection_add = 1
-	}
-	
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}	
@@ -146,6 +115,8 @@ black_hole_observatory = {
 	}
 
 	show_in_tech = "tech_sensors_3"	
+
+	
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
@@ -233,6 +204,8 @@ curator_think_tank = {
 		}
 	}
 
+
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
@@ -313,6 +286,8 @@ art_college = {
 			energy = 2
 		}
 	}
+
+
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
@@ -395,6 +370,8 @@ salvager_workshop = {
 		ship_repair_hull_mult = 0.3
 		ship_repair_armor_mult = 0.3
 	}
+
+
 
 	ai_weight = {
 		weight = 150
@@ -479,6 +456,8 @@ trader_proxy_office = {
 
 		trade_value_add = 5
 	}
+
+
 
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
@@ -570,6 +549,8 @@ mercenary_garrison = {
 			energy = 20
 		}
 	}
+
+	
 
 	ai_weight = {
 		weight = 50

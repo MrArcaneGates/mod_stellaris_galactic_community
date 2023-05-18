@@ -189,7 +189,7 @@ criminal = {
 				owner = { has_civic = "civic_barbaric_despoilers" }
 			}
 			}
-			unity = 4
+			unity = 2
 		}
 		produces = {
 			trigger = {
