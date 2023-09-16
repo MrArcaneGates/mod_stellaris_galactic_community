@@ -1,0 +1,3743 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_t6 = 500
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+# Custom Resolutions !
+
+resolution_mischief_repeal_1 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_mischief_repeal_1_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_mischief_1"
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_repeal_2 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_mischief_repeal_2_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_mischief_2"
+	}
+
+	modifier = {
+		resolution_mischief_1 = 1
+	}
+
+	allow = {}
+
+    ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_repeal_3 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_mischief_repeal_3_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_mischief_3"
+	}
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_repeal_4 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_mischief_repeal_4_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_mischief_4"
+	}
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+		resolution_mischief_3 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_repeal_5 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_mischief_repeal_5_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_mischief_5"
+	}
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+		resolution_mischief_3 = 1
+		resolution_mischief_4 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_repeal_6 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_mischief_repeal_6_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_mischief_6"
+	}
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+		resolution_mischief_3 = 1
+		resolution_mischief_4 = 1
+		resolution_mischief_5 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_1 = {
+	icon = "GFX_resolution_mischief"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	
+	target = no
+	level = 1
+
+	modifier = {
+		resolution_mischief_1 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_mischief_1"
+				is_active_resolution = "resolution_mischief_2"
+				is_active_resolution = "resolution_mischief_3"
+				is_active_resolution = "resolution_mischief_4"
+				is_active_resolution = "resolution_mischief_5"
+				is_active_resolution = "resolution_mischief_6"
+			}
+		}
+	}
+
+	ai_weight = {
+		base = @resolution_weight_hated
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_2 = {
+	icon = "GFX_resolution_mischief"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	
+	target = no
+	level = 2
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_mischief_1"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_hated
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_3 = {
+	icon = "GFX_resolution_mischief"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	
+	target = no
+	level = 3
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+		resolution_mischief_3 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_mischief_2"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_hated
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_4 = {
+	icon = "GFX_resolution_mischief"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	
+	target = no
+	level = 4
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+		resolution_mischief_3 = 1
+		resolution_mischief_4 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_mischief_3"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_hated
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_5 = {
+	icon = "GFX_resolution_mischief"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	
+	target = no
+	level = 5
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+		resolution_mischief_3 = 1
+		resolution_mischief_4 = 1
+		resolution_mischief_5 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_mischief_4"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_hated
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_mischief_6 = {
+	icon = "GFX_resolution_mischief"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	
+	target = no
+	level = 6
+
+	modifier = {
+		resolution_mischief_1 = 1
+		resolution_mischief_2 = 1
+		resolution_mischief_3 = 1
+		resolution_mischief_4 = 1
+		resolution_mischief_5 = 1
+		resolution_mischief_6 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mischief days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_mischief_5"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_hated
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+                is_gestalt = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+        modifier = {
+			factor = 1.0
+            is_megacorp = no
+		}
+
+	}
+}
+
+resolution_healthcare_repeal_1 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_healthcare_repeal_1_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_healthcare_1"
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_healthcare_repeal_2 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_healthcare_repeal_2_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_healthcare_2"
+	}
+
+	modifier = {
+		resolution_healthcare_1 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_healthcare_repeal_3 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_healthcare_repeal_3_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_healthcare_3"
+	}
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_healthcare_repeal_4 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_healthcare_repeal_4_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_healthcare_4"
+	}
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+		resolution_healthcare_3 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_healthcare_repeal_5 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_healthcare_repeal_5_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_healthcare_5"
+	}
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+		resolution_healthcare_3 = 1
+		resolution_healthcare_4 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_healthcare_repeal_6 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_healthcare_repeal_6_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_healthcare_6"
+	}
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+		resolution_healthcare_3 = 1
+		resolution_healthcare_4 = 1
+		resolution_healthcare_5 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_healthcare_1 = {
+	icon = "GFX_resolution_healthcare"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	
+	target = no
+	level = 1
+
+	modifier = {
+		resolution_healthcare_1 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_healthcare_1"
+				is_active_resolution = "resolution_healthcare_2"
+				is_active_resolution = "resolution_healthcare_3"
+				is_active_resolution = "resolution_healthcare_4"
+				is_active_resolution = "resolution_healthcare_5"
+				is_active_resolution = "resolution_healthcare_6"
+			}
+		}
+	}
+
+	ai_weight = {
+		base = @resolution_weight_loved
+
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_healthcare_2 = {
+	icon = "GFX_resolution_healthcare"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	
+	target = no
+	level = 2
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_healthcare_1"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.75
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_healthcare_3 = {
+	icon = "GFX_resolution_healthcare"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	
+	target = no
+	level = 3
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+		resolution_healthcare_3 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_healthcare_2"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_healthcare_4 = {
+	icon = "GFX_resolution_healthcare"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	
+	target = no
+	level = 4
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+		resolution_healthcare_3 = 1
+		resolution_healthcare_4 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_healthcare_3"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+	}
+}
+
+resolution_healthcare_5 = {
+	icon = "GFX_resolution_healthcare"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	
+	target = no
+	level = 5
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+		resolution_healthcare_3 = 1
+		resolution_healthcare_4 = 1
+		resolution_healthcare_5 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_healthcare_4"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+	}
+}
+
+resolution_healthcare_6 = {
+	icon = "GFX_resolution_healthcare"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	
+	target = no
+	level = 6
+
+	modifier = {
+		resolution_healthcare_1 = 1
+		resolution_healthcare_2 = 1
+		resolution_healthcare_3 = 1
+		resolution_healthcare_4 = 1
+		resolution_healthcare_5 = 1
+		resolution_healthcare_6 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_healthcare days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_healthcare_5"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+	}
+}
+
+resolution_discovery_archeology_repeal_1 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_discovery_archeology_repeal_1_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_discovery_archeology_1"
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_discovery_archeology_repeal_2 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_discovery_archeology_repeal_2_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_discovery_archeology_2"
+	}
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_discovery_archeology_repeal_3 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_discovery_archeology_repeal_3_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_discovery_archeology_3"
+	}
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_discovery_archeology_repeal_4 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_discovery_archeology_repeal_4_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_discovery_archeology_4"
+	}
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+		resolution_discovery_archeology_3 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_discovery_archeology_repeal_5 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_discovery_archeology_repeal_5_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_discovery_archeology_5"
+	}
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+		resolution_discovery_archeology_3 = 1
+		resolution_discovery_archeology_4 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_discovery_archeology_repeal_6 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_discovery_archeology_repeal_6_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_discovery_archeology_6"
+	}
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+		resolution_discovery_archeology_3 = 1
+		resolution_discovery_archeology_4 = 1
+		resolution_discovery_archeology_5 = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+			}
+}
+
+resolution_discovery_archeology_1 = {
+	icon = "GFX_resolution_discovery_archeology"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	
+	target = no
+	level = 1
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_discovery_archeology_1"
+				is_active_resolution = "resolution_discovery_archeology_2"
+				is_active_resolution = "resolution_discovery_archeology_3"
+				is_active_resolution = "resolution_discovery_archeology_4"
+				is_active_resolution = "resolution_discovery_archeology_5"
+				is_active_resolution = "resolution_discovery_archeology_6"
+			}
+		}
+	}
+
+	ai_weight = {
+		base = @resolution_weight_loved
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_discovery_archeology_2 = {
+	icon = "GFX_resolution_discovery_archeology"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	
+	target = no
+	level = 2
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_discovery_archeology_1"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.75
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_discovery_archeology_3 = {
+	icon = "GFX_resolution_discovery_archeology"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	
+	target = no
+	level = 3
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+		resolution_discovery_archeology_3 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_discovery_archeology_2"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_discovery_archeology_4 = {
+	icon = "GFX_resolution_discovery_archeology"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	
+	target = no
+	level = 4
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+		resolution_discovery_archeology_3 = 1
+		resolution_discovery_archeology_4 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_discovery_archeology_3"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_discovery_archeology_5 = {
+	icon = "GFX_resolution_discovery_archeology"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	
+	target = no
+	level = 5
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+		resolution_discovery_archeology_3 = 1
+		resolution_discovery_archeology_4 = 1
+		resolution_discovery_archeology_5 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_discovery_archeology_4"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_discovery_archeology_6 = {
+	icon = "GFX_resolution_discovery_archeology"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	
+	target = no
+	level = 6
+
+	modifier = {
+		resolution_discovery_archeology_1 = 1
+		resolution_discovery_archeology_2 = 1
+		resolution_discovery_archeology_3 = 1
+		resolution_discovery_archeology_4 = 1
+		resolution_discovery_archeology_5 = 1
+		resolution_discovery_archeology_6 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_discovery_archeology days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_discovery_archeology_5"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.1
+			is_xenophobe = yes
+		}
+	}
+}
+
+resolution_ecology_repeal_6 = {
+	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_ecology_repeal_6_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_ecology_paradise_initiative"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_ecology_repeal days = @resolution_flag_timer }
+		}
+		custom_tooltip = resolution_ecology_paradise_initiative_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_ecology_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_ecology_6"
+	}
+
+
+	modifier = {
+		resolution_ecology_recycling_initiatives = 1
+		resolution_ecology_natural_sanctuaries = 1
+		resolution_ecology_integrated_gardens = 1
+		resolution_ecology_environmental_control_board = 1
+		resolution_ecology_paradise_initiative = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_environmentalist
+		}
+
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_mining_guilds
+				has_valid_civic = civic_machine_rockbreakers
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			country_uses_food = no
+		}
+
+		modifier = {
+			factor = 1.2
+			is_lithoid_empire = yes
+		}
+	}
+}
+
+resolution_ecology_6 = {
+	icon = "GFX_resolution_ecological_protection"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+
+	target = no
+
+	modifier = {
+		resolution_ecology_recycling_initiatives = 1
+		resolution_ecology_natural_sanctuaries = 1
+		resolution_ecology_integrated_gardens = 1
+		resolution_ecology_environmental_control_board = 1
+		resolution_ecology_paradise_initiative = 1
+		resolution_ecology_6 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_ecology days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_ecology days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_ecology_paradise_initiative"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_disliked
+
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_environmentalist
+		}
+
+		modifier = {
+			factor = 1.2
+			has_valid_civic = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_mining_guilds
+				has_valid_civic = civic_machine_rockbreakers
+				country_uses_food = no
+				is_lithoid_empire = yes
+			}
+		}
+	}
+}
+
+resolution_galacticstudies_repeal_6 = {
+	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_galacticstudies_repeal_6_effect_success
+
+		hidden_effect = {
+			pass_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galacticstudies_repeal days = @resolution_flag_timer }
+		}
+
+		custom_tooltip = resolution_galacticstudies_extradimensional_experimentation_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_galacticstudies_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_galacticstudies_6"
+	}
+
+	modifier = {
+		resolution_galacticstudies_cooperative_research_channels = 1
+		resolution_galacticstudies_astral_studies_network = 1
+		resolution_galacticstudies_advanced_xenostudies = 1
+		resolution_galacticstudies_ethical_guideline_refactoring = 1
+		resolution_galacticstudies_extradimensional_experimentation = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_materialist = yes
+		}
+	}
+}
+
+resolution_galacticstudies_6 = {
+	icon = "GFX_resolution_galactic_studies"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	modifier = {
+		resolution_galacticstudies_cooperative_research_channels = 1
+		resolution_galacticstudies_astral_studies_network = 1
+		resolution_galacticstudies_advanced_xenostudies = 1
+		resolution_galacticstudies_ethical_guideline_refactoring = 1
+		resolution_galacticstudies_extradimensional_experimentation = 1
+		resolution_galacticstudies_6 = 1
+	}
+
+	effect = {
+		
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_galacticstudies days = @resolution_flag_timer }
+
+			every_playable_country = {
+				limit = { is_galactic_community_member = yes }
+				country_event = { id = federations.10020 days = 3 }
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_galacticstudies days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_disliked
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+	}
+}
+
+resolution_commerce_repeal_6 = {
+	icon = "GFX_repeal_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_commerce_repeal_6_effect_success
+
+		hidden_effect = {
+			pass_resolution = "resolution_commerce_profit_maximization_engines"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_commerce_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_commerce_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_commerce_6"
+	}
+
+	modifier = {
+		resolution_commerce_buzzword_standardization = 1
+		resolution_commerce_leveraged_privateering = 1
+		resolution_commerce_underdeveloped_system_utilization = 1
+		resolution_commerce_holistic_asset_coordination = 1
+		resolution_commerce_profit_maximization_engines =1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_megacorp = yes
+				has_valid_civic = civic_corporate_dominion
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_trading_posts
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_commerce_6 = {
+	icon = "GFX_resolution_galactic_commerce"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	modifier = {
+		resolution_commerce_buzzword_standardization = 1
+		resolution_commerce_leveraged_privateering = 1
+		resolution_commerce_underdeveloped_system_utilization = 1
+		resolution_commerce_holistic_asset_coordination = 1
+		resolution_commerce_profit_maximization_engines = 1
+		resolution_commerce_6 = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_commerce days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_commerce days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_commerce_profit_maximization_engines"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_disliked
+
+		modifier = {
+			factor = 2
+			OR = {
+				is_megacorp = yes
+				has_valid_civic = civic_corporate_dominion
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			is_authoritarian = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 0.1
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_industry_repeal_6 = {
+	icon = "GFX_repeal_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_industry_repeal_6_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_industry_project_cornucopia"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_industry_repeal days = @resolution_flag_timer }
+		}
+		custom_tooltip = resolution_industry_project_cornucopia_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_industry_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_industry_6"
+	}
+
+	modifier = {
+		resolution_industry_regulatory_facilitation = 1
+		resolution_industry_collective_waste_management = 1
+		resolution_industry_building_a_better_tomorrow = 1
+		resolution_industry_environmental_ordinance_waivers = 1
+		resolution_industry_project_cornucopia = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0.8
+			is_authoritarian = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			is_slaver = yes
+		}
+
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_environmentalist
+		}
+
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_agrarian_idyll
+		}
+	}
+}
+
+resolution_industry_6 = {
+	icon = "GFX_resolution_industrial_development"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	modifier = {
+		resolution_industry_regulatory_facilitation = 1
+		resolution_industry_collective_waste_management = 1
+		resolution_industry_building_a_better_tomorrow = 1
+		resolution_industry_environmental_ordinance_waivers = 1
+		resolution_industry_project_cornucopia = 1
+		resolution_industry_6 = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_industry_project_cornucopia_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_industry days = @resolution_flag_timer }
+
+			every_playable_country = {
+				limit = { is_galactic_community_member = yes }
+				country_event = { id = federations.10000 days = 3 }
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_industry days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_industry_project_cornucopia"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_disliked
+
+		modifier = {
+			factor = 1.2
+			is_authoritarian = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			is_slaver = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_environmentalist
+		}
+
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_agrarian_idyll
+		}
+	}
+}
+
+resolution_greatergood_repeal_6 = {
+	icon = "GFX_resolution_council_veto"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_greatergood_repeal_6_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_greatergood_repeal days = @resolution_flag_timer }
+		}
+		custom_tooltip = resolution_greatergood_universal_prosperity_mandate_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_greatergood_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_greatergood_6"
+	}
+
+	modifier = {
+		resolution_greatergood_workers_rights = 1
+		resolution_greatergood_five_year_plans = 1
+		resolution_greatergood_greater_than_ourselves = 1
+		resolution_greatergood_balance_in_the_middle = 1
+		resolution_greatergood_universal_prosperity_mandate = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_agrarian_idyll
+				has_valid_civic = civic_free_haven
+				has_valid_civic = civic_idealistic_foundation
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_slaver_guilds
+				has_valid_civic = civic_indentured_assets
+				is_slaver = yes
+			}
+		}
+	}
+}
+
+resolution_greatergood_6 = {
+	icon = "GFX_resolution_greater_good"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	modifier = {
+		resolution_greatergood_workers_rights = 1
+		resolution_greatergood_five_year_plans = 1
+		resolution_greatergood_greater_than_ourselves = 1
+		resolution_greatergood_balance_in_the_middle = 1
+		resolution_greatergood_universal_prosperity_mandate = 1
+		resolution_greatergood_6 = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_greatergood_universal_prosperity_mandate_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_greatergood days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_greatergood days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+	}
+
+	breach = {
+		OR = {
+			AND = {
+				is_gestalt = no
+				any_owned_pop = {
+					is_sapient = yes
+					OR = {
+						has_living_standard = { type = living_standard_subsistence }
+						has_living_standard = { type = living_standard_stratified }
+						has_living_standard = { type = living_standard_normal }
+						has_living_standard = { type = living_standard_academic_privilege }
+						has_living_standard = { type = living_standard_good }
+					}
+				}
+			}
+			AND = {
+				is_gestalt = yes
+				any_owned_pop = {
+					is_sapient = yes
+					has_living_standard = { type = living_standard_ego_assimilation }
+				}
+			}
+		}
+
+	}
+
+	ai_weight = {
+		base = @resolution_weight_disliked
+
+		modifier = {
+			factor = 0
+			is_egalitarian = no
+		}
+
+		modifier = {
+			factor = 0.5
+			is_megacorp = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_egalitarian
+		}
+
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_valid_civic = civic_agrarian_idyll
+				has_valid_civic = civic_free_haven
+				has_valid_civic = civic_idealistic_foundation
+				has_valid_civic = civic_inwards_perfection
+			}
+		}
+	}
+}
+
+resolution_mutualdefense_repeal_6 = {
+	icon = "GFX_repeal_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_mutualdefense_repeal_6_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_mutualdefense_renegade_containment"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mutualdefense_repeal days = @resolution_flag_timer }
+		}
+
+		custom_tooltip = resolution_mutualdefense_renegade_containment_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mutualdefense_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_mutualdefense_renegade_containment"
+	}
+
+	modifier = {
+		resolution_mutualdefense_the_readied_shield = 1
+		resolution_mutualdefense_naval_weight = 4
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0
+			is_militarist = yes
+		}
+
+		modifier = {
+			factor = 2
+			is_pacifist = yes
+		}
+	}
+}
+
+resolution_mutualdefense_6 = {
+	icon = "GFX_resolution_mutual_defense"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	modifier = {
+		resolution_mutualdefense_the_readied_shield = 1
+		resolution_mutualdefense_naval_weight = 7
+	}
+
+	effect = {
+		custom_tooltip = resolution_mutualdefense_renegade_containment_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_mutualdefense days = @resolution_flag_timer }
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_mutualdefense days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_mutualdefense_renegade_containment"
+	}
+
+	ai_weight = {
+		base = @resolution_weight_disliked
+
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_warrior_culture
+				has_valid_civic = civic_private_military_companies
+				has_valid_civic = civic_naval_contractors
+				has_valid_civic = civic_hive_subspace_ephapse
+				has_valid_civic = civic_hive_strength_of_legions
+				has_valid_civic = civic_machine_warbots
+			}
+		}
+
+		modifier = {
+			factor = 0
+			is_pacifist = yes
+		}
+	}
+}
+
+resolution_rulesofwar_repeal_6 = {
+	icon = "GFX_repeal_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_rulesofwar_repeal_6_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_rulesofwar_demobilization_initiative"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_rulesofwar_repeal days = @resolution_flag_timer }
+		}
+		custom_tooltip = resolution_rulesofwar_demobilization_initiative_tooltip
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_rulesofwar_repeal days = @resolution_flag_timer }
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_rulesofwar_6"
+	}
+
+	modifier = {
+		resolution_rulesofwar_guardian_angels = 1
+		resolution_rulesofwar_reverence_for_life = 1
+		resolution_rulesofwar_independent_tribunals = 1
+		resolution_rulesofwar_last_resort_doctrine = 1
+	}
+
+	allow = {}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+
+		modifier = {
+			factor = 0
+			is_pacifist = yes
+		}
+	}
+}
+
+resolution_rulesofwar_6 = {
+	icon = "GFX_resolution_rules_of_war"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t6
+		}
+	}
+	target = no
+
+	modifier = {
+		resolution_rulesofwar_guardian_angels = 1
+		resolution_rulesofwar_reverence_for_life = 1
+		resolution_rulesofwar_independent_tribunals = 1
+		resolution_rulesofwar_last_resort_doctrine = 1
+		resolution_rulesofwar_demobilization_initiative = 1
+		resolution_rulesofwar_6 = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_rulesofwar_demobilization_initiative_tooltip
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_rulesofwar days = @resolution_flag_timer }
+
+			every_playable_country = {
+				limit = {
+					is_galactic_community_member = yes
+					has_policy_flag = economic_policy_military
+				}
+				country_event = { id = federations.10330 }
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_rulesofwar days = @resolution_flag_timer }
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+	}
+
+	breach = {
+		has_policy_flag = economic_policy_military
+	}
+
+	ai_weight = {
+		base = @resolution_weight_disliked
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_militarist = yes
+				has_ai_personality_behaviour = conqueror
+				has_policy_flag = economic_policy_military
+			}
+		}
+
+		modifier = {
+			factor = 2
+			is_pacifist = yes
+		}
+	}
+}
+
+# Custom Sanctions !
+
+resolution_sanctions_tech_repeal_4 = {
+	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_sanctions_tech_repeal_4_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_sanctions_tech_3"
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_sanctions_tech_4"
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_tech = 3
+		}
+	}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 2
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_tech_4 = {
+	icon = "GFX_sanctions_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = no
+	sanction = yes
+
+	effect = {
+		custom_tooltip = sanctions_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_global_flag = {
+				flag = recent_galcom_sanctions_passed
+				years = 10
+			}
+		}
+	}
+
+	modifier = {
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_tech = 6
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_sanctions_tech_3"
+		is_part_of_galactic_council = yes
+	}
+
+	ai_weight = {
+		base = @resolution_weight_normal
+
+		modifier = {
+			factor = 0
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 1.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_economic_repeal_4 = {
+	icon = "GFX_repeal_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_sanctions_economic_repeal_4_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_sanctions_economic_3"
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_sanctions_economic_4"
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_economic = 3
+		}
+	}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.25
+			is_in_breach_of_any = no
+			is_megacorp = yes
+		}
+
+		modifier = {
+			factor = 2
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_economic_4 = {
+	icon = "GFX_sanctions_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = no
+	sanction = yes
+
+	effect = {
+		custom_tooltip = sanctions_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_global_flag = {
+				flag = recent_galcom_sanctions_passed
+				years = 10
+			}
+		}
+	}
+
+	modifier = {
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_economic = 6
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_sanctions_economic_3"
+		is_part_of_galactic_council = yes
+	}
+
+	ai_weight = {
+		base = @resolution_weight_normal
+
+		modifier = {
+			factor = 0
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 1.25
+			is_in_breach_of_any = no
+			is_megacorp = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_military_repeal_4 = {
+	icon = "GFX_repeal_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_sanctions_military_repeal_4_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_sanctions_military_3"
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_sanctions_military_4"
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_military = 3
+		}
+	}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.25
+			is_in_breach_of_any = no
+			OR = {
+				is_militarist = yes
+				is_pacifist = yes
+			}
+		}
+
+		modifier = {
+			factor = 2
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_military_4 = {
+	icon = "GFX_sanctions_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = no
+	sanction = yes
+
+	effect = {
+		custom_tooltip = sanctions_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_global_flag = {
+				flag = recent_galcom_sanctions_passed
+				years = 10
+			}
+		}
+	}
+
+	modifier = {
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_military = 6
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_sanctions_military_3"
+		is_part_of_galactic_council = yes
+	}
+
+	ai_weight = {
+		base = @resolution_weight_normal
+
+		modifier = {
+			factor = 0
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 1.25
+			is_in_breach_of_any = no
+			OR = {
+				is_militarist = yes
+				is_pacifist = yes
+			}
+		}
+
+		modifier = {
+			factor = 0.5
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_administrative_repeal_4 = {
+	icon = "GFX_resolution_council_veto"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_sanctions_administrative_repeal_4_effect_success
+		hidden_effect = {
+			pass_resolution = "resolution_sanctions_administrative_3"
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_sanctions_administrative_4"
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_administrative = 2
+		}
+	}
+
+	ai_weight = {
+		base = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.25
+			is_in_breach_of_any = no
+			OR = {
+				is_part_of_galactic_council = yes
+				is_xenophile = yes
+				has_civic = civic_diplomatic_corps
+				has_civic = civic_public_relations_specialists
+				has_civic = civic_hive_empath
+				has_civic = civic_machine_servitor
+			}
+		}
+
+		modifier = {
+			factor = 2
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_administrative_4 = {
+	icon = "GFX_sanctions_purple"
+
+	potential = {
+		has_federations_dlc = yes
+	}
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = no
+	sanction = yes
+
+	effect = {
+		custom_tooltip = sanctions_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_global_flag = {
+				flag = recent_galcom_sanctions_passed
+				years = 10
+			}
+		}
+	}
+
+	modifier = {
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_sanctions_administrative = 6
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_sanctions_administrative_3"
+		is_part_of_galactic_council = yes
+	}
+
+	ai_weight = {
+		base = @resolution_weight_normal
+
+		modifier = {
+			factor = 0
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 1.25
+			is_in_breach_of_any = no
+			OR = {
+				is_part_of_galactic_council = yes
+				is_xenophile = yes
+				has_civic = civic_diplomatic_corps
+				has_civic = civic_public_relations_specialists
+				has_civic = civic_hive_empath
+				has_civic = civic_machine_servitor
+			}
+		}
+
+		modifier = {
+			factor = 0.5
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}

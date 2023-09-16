@@ -16,7 +16,7 @@ listening_post = {
 	potential = {
 		exists = owner
 		owner = { has_technology = tech_sensors_2 }
-		is_normal_starbase = yes
+		is_orbital_ring = no
 	}	
 	
 	possible = {
@@ -163,7 +163,7 @@ curator_think_tank = {
 			is_homicidal = no
 			has_country_flag = curator_intro
 		}
-		is_normal_starbase = yes
+		is_orbital_ring = no
 	}
 	
 	possible = {
@@ -248,7 +248,7 @@ art_college = {
 			is_homicidal = no
 			has_country_flag = enclave_artist_encountered
 		}
-		is_normal_starbase = yes
+		is_orbital_ring = no
 		}
 	
 	possible = {
@@ -329,7 +329,7 @@ salvager_workshop = {
 			is_homicidal = no
 			has_country_flag = salvager_enclave_diplomacy_engaged
 		}
-		is_normal_starbase = yes
+		is_orbital_ring = no
 	}
 
 	possible = {
@@ -418,7 +418,7 @@ trader_proxy_office = {
 				has_fleet_flag = trader_enclave_station
 			}
 		}
-		is_normal_starbase = yes
+		is_orbital_ring = no
 	}	
 	
 	possible = {
@@ -506,7 +506,7 @@ mercenary_garrison = {
 			is_homicidal = no
 			has_country_flag = mercenary_enclave_diplomacy_engaged
 		}
-		is_normal_starbase = yes
+		is_orbital_ring = no
 	}
 
 	possible = {

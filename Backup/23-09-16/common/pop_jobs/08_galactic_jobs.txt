@@ -199,9 +199,9 @@ criminal = {
 				owner = { has_civic = "civic_scavengers" }
 			}
 			}
-			physics_research = 3
-			engineering_research = 3
-			society_research = 3
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
 		}
 	}
 

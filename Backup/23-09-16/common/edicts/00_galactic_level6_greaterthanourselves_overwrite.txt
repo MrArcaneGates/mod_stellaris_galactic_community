@@ -15,10 +15,6 @@ greater_than_ourselves = {
 
 	resources = {
 		category = edicts
-		cost = {
-			unity = @Edict2Cost
-			multiplier = value:edict_size_effect
-		}
 		upkeep = {
 			unity = @Edict2Cost
 			multiplier = value:edict_size_effect
