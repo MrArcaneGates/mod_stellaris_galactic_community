@@ -220,3 +220,5 @@
 
  civic_pirate_haven:0 "Piratenbucht"
  civic_pirate_haven_effects:0 "Kriminelle produzieren £unity£ Einigkeit, £job_soldier£ Verteidigungsarmeen und Flottenkapazität. Durch Kombination mit Barbarische Plünderer erhöht sich die produzierte Einigkeit, durch Kombination mit Wiederverwerter produzieren Kriminelle außerdem eine kleine Menge Forschung"
+
+ building_labor_union:0 "Gewerkschaftszentrale"

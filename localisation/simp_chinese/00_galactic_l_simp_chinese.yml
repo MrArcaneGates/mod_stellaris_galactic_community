@@ -217,3 +217,5 @@
 
  civic_pirate_haven:0 "Pirate Haven"
  civic_pirate_haven_effects:0 "Criminals produce £unity£ unity, £job_soldier£ planetary defense armies and naval capacity. Combining this civic with Barbaric Despoilers increases the £unity£ unity produced by criminals. Combining it with Scavengers allows criminals to produce a small amount of research"
+
+ building_labor_union:0 "Labor Union Headquarter"
