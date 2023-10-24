@@ -245,7 +245,7 @@ steward = {
 		potential = {
 			always = yes
 		}
-		trade_value_add = 4
+		trade_value_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 

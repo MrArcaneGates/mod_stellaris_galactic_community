@@ -26,9 +26,9 @@ living_standard_shared_burden = {
 
 	# Triggered so the auto-generated modifier is hidden.
 	triggered_pop_modifier = {
-		living_standard_trade_value_rulers_add = 2
-		living_standard_trade_value_specialists_add = 2
-		living_standard_trade_value_workers_add = 2
+		living_standard_trade_value_rulers_add = 1
+		living_standard_trade_value_specialists_add = 1
+		living_standard_trade_value_workers_add = 1
 	}
 
 	pop_modifier = {
@@ -100,9 +100,9 @@ living_standard_worker_ownership = {
 		potential = {
 			always = yes
 		}
-		living_standard_trade_value_rulers_add = 2
-		living_standard_trade_value_specialists_add = 2
-		living_standard_trade_value_workers_add = 2
+		living_standard_trade_value_rulers_add = 1
+		living_standard_trade_value_specialists_add = 1
+		living_standard_trade_value_workers_add = 1
 	}
 
 	pop_modifier = {

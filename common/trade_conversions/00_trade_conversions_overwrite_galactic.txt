@@ -15,7 +15,7 @@ mutual_aid_conversion =
 		energy = 0.3
 		minerals = 0.3
 		food = 0.3
-		unity = 0.5
+		unity = 0.2
 	}
 
 	economic_category = trade_routes
